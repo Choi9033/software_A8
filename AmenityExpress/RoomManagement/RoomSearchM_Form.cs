@@ -1,5 +1,6 @@
 ﻿using AmenityExpress;
 using AmenityExpress.RoomManagement;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -124,6 +125,23 @@ namespace AmenityExpress
             else
             {
                 MessageBox.Show("삭제할 항목을 선택하세요.");
+            }
+        }
+        private void DeleteRoom(int roomNum)
+        {
+            string sql = "DELETE FROM ROOM_MANAGE WHERE ROOMNUM = :ROOMNUM";
+            OracleParameter parameter = new OracleParameter("ROOMNUM", roomNum);
+
+            DBConnector dBConnector = new DBConnector();
+            
+            try
+            {
+                
+                MessageBox.Show("객실 정보가 삭제되었습니다.");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("객실 정보 삭제 중 오류가 발생했습니다. : "+ ex.Message);
             }
         }
     }

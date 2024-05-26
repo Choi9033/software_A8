@@ -48,5 +48,10 @@ namespace AmenityExpress.RoomManagement
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+        private void DialogForm2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -173,6 +173,7 @@
             this.Name = "DialogForm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DialogForm2";
+            this.Load += new System.EventHandler(this.DialogForm2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RoomPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
